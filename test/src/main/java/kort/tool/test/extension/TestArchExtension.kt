@@ -1,5 +1,6 @@
 package kort.tool.test.extension
 
+import android.annotation.SuppressLint
 import androidx.arch.core.executor.ArchTaskExecutor
 import androidx.arch.core.executor.TaskExecutor
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -13,6 +14,7 @@ import org.junit.jupiter.api.extension.ExtensionContext
  * Created by Kort on 2019-07-04.
  */
 @ExperimentalCoroutinesApi
+@SuppressLint("RestrictedApi")
 class TestArchExtension : Extension, BeforeAllCallback, AfterAllCallback {
     private val testDispatcher = TestCoroutineDispatcher()
 
